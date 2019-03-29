@@ -1,9 +1,13 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
+	static ArrayList<Personnage> listPerso = new ArrayList<Personnage>();
+	static Scanner clavier = new Scanner(System.in);
 
   public static void main(String[] args) {
     //System.out.println("Hola mundo");
     System.out.println("\nBIENVENU AU JEU DE CARTES\n");
-    //ArrayList<Personnage> listPerso = new ArrayList<Personnage>();
     //System.out.println("Choisissez un personnage parmi :")
 
 /*    Minotaure claudio = new Minotaure("Claudio",15);

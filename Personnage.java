@@ -18,6 +18,10 @@ abstract class Personnage {
     pointsVie += heal;
   }
 
+	public String nomClass() {
+		return this.getClass().getName();
+	}
+
   public String allInfo() {
     return "\n  > P. VIE  : " + pointsVie;
   }
