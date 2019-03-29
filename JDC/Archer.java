@@ -13,10 +13,10 @@ public class Archer extends Guerrier {
     int distance = rand.nextInt(20);
     if(distance > 10) {
       cible.attacked(pointsAttq);
-      System.out.println(cible.nom + "a été attaqué\n");
+      System.out.println(cible.nom + " a été attaqué\n");
     }
     else
-      System.out.println(cible.nom + "est trop proche pour l'attaquer\n");
+      System.out.println(cible.nom + " est trop proche pour l'attaquer\n");
   }
 
   public String allInfo() {

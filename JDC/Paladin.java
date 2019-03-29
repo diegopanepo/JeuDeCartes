@@ -1,4 +1,4 @@
-public class Paladin extends Personnage implements Combattre, Soigner{
+abstract class Paladin extends Personnage implements Combattre, Soigner{
   int pointsAttq;
   int pointsSoin;
 
@@ -8,13 +8,9 @@ public class Paladin extends Personnage implements Combattre, Soigner{
     this.pointsSoin = pointsSoin;
   }
 
-  public void diminuerVie(Personnage cible) {
-    cible.attacked(pointsAttq);
-  }
+  public abstract void diminuerVie(Personnage cible);
 
-  public void augmenteVie(Personnage cible) {
-    cible.healed(pointsSoin);
-  }
+  public abstract void augmenteVie(Personnage cible);
 
   public String allInfo () {
     return super.allInfo() + "\n  > P. ATTQ : " + pointsAttq +

@@ -1,4 +1,4 @@
-public class Soigneur extends Personnage implements Soigner {
+abstract class Soigneur extends Personnage implements Soigner {
   int pointsSoin;
 
   public Soigneur (String nom, int pointsSoin) {
@@ -6,9 +6,7 @@ public class Soigneur extends Personnage implements Soigner {
     this.pointsSoin = pointsSoin;
   }
 
-  public void augmenteVie(Personnage cible) {
-    cible.healed(pointsSoin);
-  }
+  public abstract void augmenteVie(Personnage cible);
 
   public String allInfo () {
     return super.allInfo() + "\n  > P. SOIN : " + pointsSoin;

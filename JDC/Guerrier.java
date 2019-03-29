@@ -1,4 +1,4 @@
-public class Guerrier extends Personnage implements Combattre {
+abstract class Guerrier extends Personnage implements Combattre {
   int pointsAttq;
 
   public Guerrier (String nom, int pointsAttq) {
@@ -6,9 +6,7 @@ public class Guerrier extends Personnage implements Combattre {
     this.pointsAttq = pointsAttq;
   }
 
-  public void diminuerVie(Personnage cible) {
-    cible.attacked(pointsAttq);
-  }
+  public abstract void diminuerVie(Personnage cible);
 
   public String allInfo() {
     return super.allInfo() + "\n  > P. ATTQ : " + pointsAttq;
