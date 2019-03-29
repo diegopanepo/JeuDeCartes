@@ -7,7 +7,7 @@ abstract class Personnage {
   public Personnage(String nom) {
     Random rand = new Random();
     this.nom = nom;
-    this.pointsVie = rand.nextInt(100);
+    this.pointsVie = rand.nextInt(10) + 100;
   }
 
   public void attacked(int degat) {
@@ -19,6 +19,6 @@ abstract class Personnage {
   }
 
   public String allInfo() {
-    return "\n  > Points de Vie : " + pointsVie;
+    return "\n  > P. VIE  : " + pointsVie;
   }
 }

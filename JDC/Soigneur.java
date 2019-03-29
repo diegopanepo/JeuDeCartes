@@ -11,6 +11,6 @@ public class Soigneur extends Personnage implements Soigner {
   }
 
   public String allInfo () {
-    return super.allInfo() + "\n  > Points de Soin : " + pointsSoin;
+    return super.allInfo() + "\n  > P. SOIN : " + pointsSoin;
   }
 }

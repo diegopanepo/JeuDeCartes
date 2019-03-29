@@ -13,14 +13,14 @@ public class Archer extends Guerrier {
     int distance = rand.nextInt(20);
     if(distance > 10) {
       cible.attacked(pointsAttq);
-      System.out.println(cible + "a été attaqué");
+      System.out.println(cible.nom + "a été attaqué\n");
     }
     else
-      System.out.println(cible + "est trop proche pour l'attaquer");
+      System.out.println(cible.nom + "est trop proche pour l'attaquer\n");
   }
 
   public String allInfo() {
     return nom + "\n> Classe : " + this.getClass().getSuperclass().getName() +
-    "\n  > Sousclasse : " + this.getClass().getName() + super.allInfo() + "\n";
+    "\n> Sousclasse : " + this.getClass().getName() + super.allInfo() + "\n";
   }
 }

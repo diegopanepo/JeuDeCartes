@@ -17,7 +17,7 @@ public class Paladin extends Personnage implements Combattre, Soigner{
   }
 
   public String allInfo () {
-    return super.allInfo() + "\n  > Points d'Attaque : " + pointsAttq +
-    "\n  > Points de Soin : " + pointsSoin;
+    return super.allInfo() + "\n  > P. ATTQ : " + pointsAttq +
+    "\n  > P. SOIN : " + pointsSoin;
   }
 }
