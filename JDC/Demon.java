@@ -1,5 +1,3 @@
-package JDC;
-
 public class Demon extends Paladin {
   //pointsAttq = 15;
   //pointsSoin = 8;

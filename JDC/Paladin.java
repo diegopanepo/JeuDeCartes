@@ -1,5 +1,3 @@
-package JDC;
-
 public class Paladin extends Personnage implements Combattre, Soigner{
   int pointsAttq;
   int pointsSoin;

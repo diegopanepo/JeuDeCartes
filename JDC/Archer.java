@@ -1,5 +1,3 @@
-package JDC;
-
 public class Archer extends Guerrier {
   //pointsAttq = 10;
 

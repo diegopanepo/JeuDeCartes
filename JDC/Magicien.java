@@ -1,5 +1,3 @@
-package JDC;
-
 public class Magicien extends Paladin {
   //pointsAttq = 10;
   //pointsSoin = 10;

@@ -1,5 +1,3 @@
-package JDC;
-
 public class Guerrier extends Personnage implements Combattre {
   int pointsAttq;
 

@@ -1,5 +1,3 @@
-package JDC;
-
 public class Soigneur extends Personnage implements Soigner {
   int pointsSoin;
 

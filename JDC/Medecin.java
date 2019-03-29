@@ -1,5 +1,3 @@
-package JDC;
-
 public class Medecin extends Soigneur {
   //pointsSoin = 10;
 

@@ -1,5 +1,3 @@
-package JDC;
-
 public class Chaman extends Soigneur {
   //pointsSoin = 15;
 

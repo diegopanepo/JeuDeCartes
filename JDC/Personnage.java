@@ -1,5 +1,3 @@
-package JDC;
-
 import java.util.Random;
 
 abstract class Personnage {
