@@ -7,11 +7,11 @@ public class Guerrier extends Personnage implements Combattre {
   }
 
   public void diminuerVie(Personnage cible) {
-    cible.attacked(pointsAttq);
+    //cible.attacked(pointsAttq);
     //System.out.println("Mammal eats");
   }
 
-  public String allInfo () {
-    return super.allInfo() + "\n Points d'Attaque : " + pointsAttq;
+  public String allInfo() {
+    return super.allInfo() + "\n  > Points d'Attaque : " + pointsAttq;
   }
 }

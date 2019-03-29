@@ -19,6 +19,6 @@ abstract class Personnage {
   }
 
   public String allInfo() {
-    return "\n Points de Vie : " + pointsVie;
+    return "\n  > Points de Vie : " + pointsVie;
   }
 }

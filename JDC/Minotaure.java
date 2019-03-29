@@ -1,4 +1,4 @@
-//import java.util.Random;
+import java.util.Random;
 
 public class Minotaure extends Guerrier {
   //pointsAttq = 15;
@@ -6,14 +6,21 @@ public class Minotaure extends Guerrier {
   public Minotaure(String nom, int pointsAttq) {
     super(nom, pointsAttq);
   }
-/*
+
   public void diminuerVie(Personnage cible) {
+    //Minotaure n'attaque que si l'ennemi est proche
+    Random rand = new Random();
     int distance = rand.nextInt(20);
-    if(distance)
-  }*/
+    if(distance < 8) {
+      cible.attacked(pointsAttq);
+      System.out.println(cible + "a été attaqué");
+    }
+    else
+      System.out.println(cible + "est trop loin pour l'attaquer");
+  }
 
   public String allInfo() {
-    return nom + "\nClasse : " + this.getClass().getSuperclass().getName() +
-    "\nSousclasse : " + this.getClass().getName() + super.allInfo();
+    return nom + "\n> Classe : " + this.getClass().getSuperclass().getName() +
+    "\n  > Sousclasse : " + this.getClass().getName() + super.allInfo() + "\n";
   }
 }

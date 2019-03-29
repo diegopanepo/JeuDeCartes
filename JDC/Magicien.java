@@ -7,7 +7,7 @@ public class Magicien extends Paladin {
   }
 
   public String allInfo() {
-    return nom + "\nClasse : " + this.getClass().getSuperclass().getName() +
-    "\nSousclasse : " + this.getClass().getName() + super.allInfo();
+    return nom + "\n> Classe : " + this.getClass().getSuperclass().getName() +
+    "\n  > Sousclasse : " + this.getClass().getName() + super.allInfo() + "\n";
   }
 }
