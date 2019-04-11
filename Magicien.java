@@ -12,10 +12,10 @@ public class Magicien extends Paladin {
     //Magicien a une chance sur 3 d'attaquer avec un bonus
     Random rand = new Random();
     int de = rand.nextInt(15);
-    System.out.print(cible.nom + " a été attaqué");
+    System.out.print(cible.nom + " -" + pointsAttq + "PV");
     if(de % 5 == 0) {
       cible.attacked(pointsAttq + 3);
-      System.out.println(" avec un bonus\n");
+      System.out.println(" +3PV ! (bonus)\n");
     }
     else {
       cible.attacked(pointsAttq);

@@ -11,10 +11,10 @@ public class Chaman extends Soigneur {
     //Chaman a une chance sur 5 de soigner avec un bonus
     Random rand = new Random();
     int de = rand.nextInt(20);
-    System.out.print(cible.nom + " a été soigné");
+    System.out.print(cible.nom + " +" + pointsSoin + "PV");
     if(de % 4 == 0) {
       cible.healed(pointsSoin + 5);
-      System.out.println(" avec un bonus de vie\n");
+      System.out.println(" +5PV ! (bonus)\n");
     }
     else {
       cible.healed(pointsSoin);

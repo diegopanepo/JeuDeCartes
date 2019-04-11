@@ -13,7 +13,7 @@ public class Minotaure extends Guerrier {
     int distance = rand.nextInt(20);
     if(distance < 8) {
       cible.attacked(pointsAttq);
-      System.out.println(cible.nom + " a été attaqué\n");
+      System.out.println(cible.nom + " -" + pointsAttq + "PV\n");
     }
     else
       System.out.println(cible.nom + " est trop loin pour l'attaquer\n");

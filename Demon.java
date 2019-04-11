@@ -10,13 +10,14 @@ public class Demon extends Paladin {
     //Demon attaque au cible mais aussi à un co-équipier ou lui même au hasard
     //encore en construction
     cible.attacked(pointsAttq);
-    System.out.println(cible.nom + " a été attaqué mais aussi \n");
+    System.out.println(cible.nom + " -" + pointsAttq + "PV\n");
+		//System.out.println(coequipier.nom + " - " + pointsAttq + " PV\n");
   }
 
   public void augmenteVie(Personnage cible) {
-    //Demon n'a jamais beaucoup de points de soin
+    //Demon n'a jamais beaucoup de points de soin mais ne rate pas
     cible.healed(pointsSoin);
-    System.out.println(cible.nom + " a été soigné\n");
+    System.out.println(cible.nom + " +" + pointsSoin + "PV\n");
   }
 
   public String allInfo() {
