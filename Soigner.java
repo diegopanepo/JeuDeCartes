@@ -1,5 +1,5 @@
 public interface Soigner {
 
-  public void augmenteVie(Personnage cible);
+	public void augmenteVie(Personnage cible);
 
 }

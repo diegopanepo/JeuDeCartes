@@ -1,14 +1,22 @@
+import java.util.Random;
+
 abstract class Guerrier extends Personnage implements Combattre {
-  int pointsAttq;
+	protected int pointsAttq;
 
-  public Guerrier (String nom, int pointsAttq) {
-    super(nom);
-    this.pointsAttq = pointsAttq;
-  }
+	public Guerrier(String nom, int pointsAttq) {
+		super(nom);
+		this.pointsAttq = pointsAttq;
+	}
 
-  public abstract void diminuerVie(Personnage cible);
+	public Guerrier(String nom) {
+		super(nom);
+		Random rand = new Random();
+		this.pointsAttq = rand.nextInt(5) + 15;
+	}
 
-  public String allInfo() {
-    return super.allInfo() + "\n  > P. ATTQ : " + pointsAttq;
-  }
+	public abstract void diminuerVie(Personnage cible);
+
+	public String allInfo() {
+		return super.allInfo() + "\n  > P. ATTQ : " + pointsAttq;
+	}
 }
