@@ -23,6 +23,7 @@ public class Fenetre extends JFrame {
 
 	static ArrayList<Personnage> joueur1, joueur2;
 	protected boolean tour = true; // joueur1 = true // joueur2 = false //
+	protected String attente = "-----   En attente de votre ordre   -----";
 	protected JPanel nor = new JPanel();
 	protected JPanel cen = new JPanel();
 	protected JPanel sud = new JPanel();
@@ -36,7 +37,7 @@ public class Fenetre extends JFrame {
 	protected JTextArea tourJoueur2 = new JTextArea("Equipe2", 1, 4);
 	protected JTextArea info1 = new JTextArea(6, 12);
 	protected JTextArea info2 = new JTextArea(6, 12);
-	protected JTextArea descrip = new JTextArea("-----   En attente de votre ordre   -----", 3, 18);
+	protected JTextArea descrip = new JTextArea(attente, 3, 18);
 	protected JList JLequipe1, JLequipe2;
 	protected DefaultListModel<String> model1 = new DefaultListModel<String>();
 	protected DefaultListModel<String> model2 = new DefaultListModel<String>();
@@ -107,7 +108,7 @@ public class Fenetre extends JFrame {
 		this.setVisible(true);
 	}
 
-	//Dans cette classe, on évalue d'abord si des personnages ont été sélcétionnés
+	//Dans cette classe, on évalue d'abord si des personnages ont été séléctionnés
 	//dans les deux listes. Après on vérifie si le personnage joueur est toujours
 	//vivant, puis on vérifie si ce personnage peut faire un attaque
 	//Si le personnage attaque l'ennemi, une brève description sera affichée
@@ -116,6 +117,8 @@ public class Fenetre extends JFrame {
 	class ActionCombat extends MouseAdapter {
 		public void mouseClicked(MouseEvent att) {
 			try {
+
+				analyserVictoire();
 
 				if(JLequipe1.isSelectionEmpty())
 					throw new ExceptionNonSelectionne();
@@ -171,14 +174,13 @@ public class Fenetre extends JFrame {
 					tourJoueur2.setText("Equipe2");
 					descrip.setText(mess);
 				}
-				analyserVictoire();
 
 			} catch(ExceptionActionIncomp soig) {
-						descrip.setText("-----   En attente de votre ordre   -----");
+						descrip.setText(attente);
 			} catch(ExceptionPersoMort mort) {
-					descrip.setText("-----   En attente de votre ordre   -----");
+					descrip.setText(attente);
 			} catch(ExceptionNonSelectionne selec) {
-					descrip.setText("-----   En attente de votre ordre   -----");
+					descrip.setText(attente);
 			} catch(ExceptionGameOver over) {}
 		}
 	}
@@ -203,6 +205,9 @@ public class Fenetre extends JFrame {
 				Random rand = new Random();
 
 				if(tour) { //tour du joueur 1
+
+					analyserVictoire();
+
 					index1 = JLequipe1.getSelectedIndex();
 					perso1 = joueur1.get(index1);
 					class1 = perso1.getClass().getSuperclass().getName();
@@ -266,14 +271,13 @@ public class Fenetre extends JFrame {
 					tourJoueur2.setText("Equipe2");
 					descrip.setText(mess);
 				}
-				analyserVictoire();
 
 			} catch(ExceptionActionIncomp soig) {
-					descrip.setText("-----   En attente de votre ordre   -----");
+					descrip.setText(attente);
 			} catch(ExceptionPersoMort mort) {
-					descrip.setText("-----   En attente de votre ordre   -----");
+					descrip.setText(attente);
 			}	catch(ExceptionNonSelectionne selec) {
-						descrip.setText("-----   En attente de votre ordre   -----");
+						descrip.setText(attente);
 			} catch(ExceptionGameOver over) {}
 		}
 	}

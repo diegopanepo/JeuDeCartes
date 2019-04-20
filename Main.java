@@ -1,18 +1,23 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-//****************************************************************//
-//	EXPLICATION JEU DE CARTES par Diego Moreno Villanueva EISE3		//
-//	Le jeu consiste en deux équipes avec 4 personnages chacun			//
-//	Le but du jeu est d'éliminer le plus vite possible à l'autre	//
-//	équipe, et pour ce faire il suffit d'éliminer tous les perso	//
-//	autres que les Soigneurs (puisqu'ils ne peuvent que soigner)	//
-//	L'interface du jeu inclut les listes avec les personnages dont//
-//	les caractéristiques sont affichées avec un appui; les boutons//
-//	pour attaquer ou soigner et un tableau qui indique la dernière//
-//	action faite. Le futur du projet est d'améliorer l'interface	//
-// en demandant aux joueurs de nommer eux mêmes les personnages		//
-//****************************************************************//
+//*****************************************************************//
+// EXPLICATION DU JEU DE CARTES par Diego Moreno Villanueva EISE3  //
+// Le jeu consiste en deux équipes avec 4 personnages chacun. Il y //
+// a trois de personnages : guerriers, paladins et soigneurs; G et //
+// P peuvent attaquer et P et S peuvent soigner. Pour soigner, il  //
+// suffit de choisir le P ou S, mais pour attaquer, il faut choisir//
+// le G ou P et sa cible. Le but du jeu est d'éliminer le plus vite//
+// possible à l'autre équipe, et pour ce faire il suffit d'éliminer//
+// tous les perso autres que les S (car ils ne peuvent faire que   //
+//soigner). L'interface du jeu inclut les listes avec les persos,  //
+// les boutons "Soigne" et "Combat", les titres précisant qui doit //
+// jouer, ainsi que des tableaux pour afficher les caractéristiques//
+// des personnages quand les joueurs y appuyent dans les listes, et//
+//  pour montrer la dernière action effectuée.                     //
+// Le futur du projet est d'améliorer l'interface en demandant aux //
+// joueurs de nommer eux mêmes les personnages                     //
+//*****************************************************************//
 
 public class Main {
 
