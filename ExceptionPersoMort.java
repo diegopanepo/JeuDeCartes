@@ -1,8 +1,7 @@
 import javax.swing.JOptionPane;
 
 public class ExceptionPersoMort extends Exception {
-	public ExceptionPersoMort() {
-		JOptionPane.showMessageDialog(null,
-			"Ce personnage est déjà mort !");
+	public ExceptionPersoMort(Personnage perso) {
+		JOptionPane.showMessageDialog(null, perso.nom + " est déjà mort !");
 	}
 }

@@ -1,8 +1,8 @@
 import javax.swing.JOptionPane;
 
 public class ExceptionActionIncomp extends Exception {
-	public ExceptionActionIncomp() {
-		JOptionPane.showMessageDialog(null,
-			"L'action n'est pas possible pour ce personnage\n");
+	public ExceptionActionIncomp(Personnage perso, String classe, String act) {
+		JOptionPane.showMessageDialog(null, perso.nom + " est de classe " +
+			classe + " et ne peut pas " + act);
 	}
 }

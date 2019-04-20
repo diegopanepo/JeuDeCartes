@@ -1,5 +1,5 @@
 public interface Combattre {
 
-	public void diminuerVie(Personnage cible);
+	public String diminuerVie(Personnage cible);
 
 }

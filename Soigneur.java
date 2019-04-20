@@ -14,7 +14,7 @@ abstract class Soigneur extends Personnage implements Soigner {
 		this.pointsSoin = rand.nextInt(5) + 10;
 	}
 
-	public abstract void augmenteVie(Personnage cible);
+	public abstract String augmenteVie(Personnage cible);
 
 	public String allInfo () {
 		return super.allInfo() + "\n  > P. SOIN : " + pointsSoin;

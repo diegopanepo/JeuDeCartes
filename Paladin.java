@@ -18,9 +18,9 @@ abstract class Paladin extends Personnage implements Combattre, Soigner{
 		this.pointsSoin = rand.nextInt(3) + 8;
 	}
 
-	public abstract void diminuerVie(Personnage cible);
+	public abstract String diminuerVie(Personnage cible);
 
-	public abstract void augmenteVie(Personnage cible);
+	public abstract String augmenteVie(Personnage cible);
 
 	public String allInfo() {
 		return super.allInfo() + "\n  > P. ATTQ : " + pointsAttq +

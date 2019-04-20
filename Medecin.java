@@ -11,14 +11,16 @@ public class Medecin extends Soigneur {
 		super(nom);
 	}
 
-	public void augmenteVie(Personnage cible) {
+	public String augmenteVie(Personnage cible) {
 		//Medecin reçoit un peu de dommage quand il soigne
 		Random rand = new Random();
 		int de = rand.nextInt(6);
+		String mess = this.nom + "  ->  " + cible.nom + " +" + pointsSoin +
+			"PV\n -" + de + "PV (recul)\n";
 		cible.healed(pointsSoin);
 		this.attacked(de);
-		System.out.println(cible.nom + " +" + pointsSoin + "PV\n" + nom +
-			" -" + de + "PV (recul)\n");
+		System.out.println(mess);
+		return mess;
 	}
 
 	public String allInfo() {

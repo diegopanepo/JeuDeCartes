@@ -13,18 +13,22 @@ public class Demon extends Paladin {
 		this.pointsSoin -= 4;
 	}
 
-	public void diminuerVie(Personnage cible) {
+	public String diminuerVie(Personnage cible) {
 		//Demon attaque au cible mais aussi à un co-équipier ou lui même au hasard
 		//encore en construction
+		String mess = this.nom + "  ->  " + cible.nom + " -" + pointsAttq + "PV\n";
 		cible.attacked(pointsAttq);
-		System.out.println(cible.nom + " -" + pointsAttq + "PV\n");
+		System.out.println(mess);
 		//System.out.println(coequipier.nom + " - " + pointsAttq + " PV\n");
+		return mess;
 	}
 
-	public void augmenteVie(Personnage cible) {
+	public String augmenteVie(Personnage cible) {
 		//Demon n'a jamais beaucoup de points de soin mais ne rate pas
+		String mess = cible.nom + " +" + pointsSoin + "PV\n";
 		cible.healed(pointsSoin);
-		System.out.println(cible.nom + " +" + pointsSoin + "PV\n");
+		System.out.println(mess);
+		return mess;
 	}
 
 	public String allInfo() {

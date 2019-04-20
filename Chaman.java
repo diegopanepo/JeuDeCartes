@@ -11,19 +11,22 @@ public class Chaman extends Soigneur {
 		super(nom);
 	}
 
-	public void augmenteVie(Personnage cible) {
+	public String augmenteVie(Personnage cible) {
 		//Chaman a une chance sur 5 de soigner avec un bonus
 		Random rand = new Random();
 		int de = rand.nextInt(20);
-		System.out.print(cible.nom + " +" + pointsSoin + "PV");
+		String mess = this.nom + "  ->  " + cible.nom + " +" + pointsSoin + "PV";
 		if(de % 4 == 0) {
+			mess = mess + " +5PV ! (bonus)\n";
 			cible.healed(pointsSoin + 5);
-			System.out.println(" +5PV ! (bonus)\n");
+			System.out.println(mess);
 		}
 		else {
+			mess = mess + "\n";
 			cible.healed(pointsSoin);
-			System.out.println("\n");
+			System.out.println(mess);
 		}
+		return mess;
 	}
 
 	public String allInfo() {

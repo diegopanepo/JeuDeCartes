@@ -12,25 +12,30 @@ public class Magicien extends Paladin {
 		super(nom);
 	}
 
-	public void diminuerVie(Personnage cible) {
+	public String diminuerVie(Personnage cible) {
 		//Magicien a une chance sur 3 d'attaquer avec un bonus
 		Random rand = new Random();
 		int de = rand.nextInt(15);
-		System.out.print(cible.nom + " -" + pointsAttq + "PV");
+		String mess = this.nom + "  ->  " + cible.nom + " -" + pointsAttq + "PV";
 		if(de % 5 == 0) {
+			mess = mess + " -3PV ! (bonus)\n";
 			cible.attacked(pointsAttq + 3);
-			System.out.println(" +3PV ! (bonus)\n");
+			System.out.println(mess);
 		}
 		else {
+			mess = mess + "\n";
 			cible.attacked(pointsAttq);
-			System.out.println("\n");
+			System.out.println(mess);
 		}
+		return mess;
 	}
 
-	public void augmenteVie(Personnage cible) {
-		//Demon n'a jamais beaucoup de points de soin
+	public String augmenteVie(Personnage cible) {
+		//Magicien cure effectivement a ses allies
+		String mess = this.nom + "  ->  " + cible.nom + " +" + pointsSoin + "PV\n";
 		cible.healed(pointsSoin);
-		System.out.println(cible.nom + " a été soigné");
+		System.out.println(mess);
+		return mess;
 	}
 
 	public String allInfo() {

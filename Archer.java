@@ -11,20 +11,25 @@ public class Archer extends Guerrier {
 		super(nom);
 	}
 
-	public void diminuerVie(Personnage cible) {
+	public String diminuerVie(Personnage cible) {
 		//Archer n'attaque que si l'ennemi est loin
 		Random rand = new Random();
+		String mess;
 		int distance = rand.nextInt(20);
 		if(distance > 10) {
 			cible.attacked(pointsAttq);
-			System.out.println(cible.nom + " -" + pointsAttq + "PV\n");
+			mess = this.nom + "  ->  " + cible.nom + " -" + pointsAttq + "PV\n";
+			System.out.println(mess);
 		}
-		else
-			System.out.println(cible.nom + " est trop proche pour l'attaquer\n");
+		else {
+			mess = this.nom + "  ->  " + cible.nom + " est trop proche pour l'attaquer\n";
+			System.out.println(mess);
 		}
+		return mess;
+	}
 
-		public String allInfo() {
-		return nom + "\n> Classe : " + this.getClass().getSuperclass().getName() +
-		/*"\n> Sousclasse : " + this.getClass().getName() +*/ super.allInfo() + "\n";
+	public String allInfo() {
+	return nom + "\n> Classe : " + this.getClass().getSuperclass().getName() +
+	/*"\n> Sousclasse : " + this.getClass().getName() +*/ super.allInfo() + "\n";
 	}
 }

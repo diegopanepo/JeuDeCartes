@@ -14,7 +14,7 @@ abstract class Guerrier extends Personnage implements Combattre {
 		this.pointsAttq = rand.nextInt(5) + 15;
 	}
 
-	public abstract void diminuerVie(Personnage cible);
+	public abstract String diminuerVie(Personnage cible);
 
 	public String allInfo() {
 		return super.allInfo() + "\n  > P. ATTQ : " + pointsAttq;

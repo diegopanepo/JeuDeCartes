@@ -12,6 +12,8 @@ abstract class Personnage {
 
 	public void attacked(int degat) {
 		pointsVie -= degat;
+		if(pointsVie <= 0)
+			pointsVie = 0;
 	}
 
 	public void healed(int heal) {
@@ -24,5 +26,9 @@ abstract class Personnage {
 
 	public String allInfo() {
 		return "\n  > P. VIE  : " + pointsVie;
+	}
+
+	public String toString() {
+		return nom;
 	}
 }
